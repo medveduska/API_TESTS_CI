@@ -4,7 +4,7 @@ pipeline{
         pollSCM('*/1 * * * *')
     }
     parameters {
-        String(name: 'ENVIRONMENT', defaultValue: 'DEV', description: 'Test Environment')
+        string(name: 'ENVIRONMENT', defaultValue: 'DEV', description: 'Test Environment')
     }
     stages {
         stage('ui-test-execution') {
